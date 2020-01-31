@@ -1,13 +1,10 @@
-FROM debian:9.5-slim
-
+FROM debian:9.11-slim
 
 # Update
 RUN apt-get update
 
-
 # Install packages
 RUN apt-get -yq install rsync openssh-client
-
 
 # Label
 LABEL "com.github.actions.name"="rsync deployments"
@@ -15,10 +12,9 @@ LABEL "com.github.actions.description"="For deploying code to a webserver via rs
 LABEL "com.github.actions.icon"="truck"
 LABEL "com.github.actions.color"="yellow"
 
-LABEL "repository"="http://github.com/contention/rsync-deployments"
-LABEL "homepage"="https://github.com/contention/rsync-deployments"
-LABEL "maintainer"="Contention <hello@contention.agency>"
-
+LABEL "repository"="http://github.com/galexrt/rsync-deployments"
+LABEL "homepage"="https://github.com/galexrt/rsync-deployments"
+LABEL "maintainer"="Alexander Trost <galexrt@googlemail.com>"
 
 # Copy entrypoint
 ADD entrypoint.sh /entrypoint.sh
