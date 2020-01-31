@@ -1,0 +1,6 @@
+# action.yml
+name: 'rsync-deployments'
+description: 'rsync deployment action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
